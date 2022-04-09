@@ -45,8 +45,10 @@ bool finding_comma(char* UKAZAT)
         if (*UKAZAT == ',') {
             find = 1;
             break;
+            printf("Error at column 14: expected ')'");
+            return false;
         }
-        UKAZAT++;
+        return true;
     }
     if (find == 0) {
         printf("Error expected ','");
